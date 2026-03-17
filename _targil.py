@@ -6,7 +6,7 @@ def get_lucky_numbers(amount: int) -> tuple[int]:
 
 def input_until_lucky(lucky_numbers: tuple) -> int:
     attempts = 0
-    _value_of_lucky_numbers = get_lucky_numbers(lucky_numbers)
+    _value_of_lucky_numbers = lucky_numbers
     print(_value_of_lucky_numbers) # only for checking purposes
     while True:
         user_input = int(input("put a number: "))
@@ -18,7 +18,7 @@ def input_until_lucky(lucky_numbers: tuple) -> int:
     print(f'you tried {attempts} attempts')
     return attempts
 
-input_until_lucky(4)
+input_until_lucky(get_lucky_numbers(4))
 
 
 
